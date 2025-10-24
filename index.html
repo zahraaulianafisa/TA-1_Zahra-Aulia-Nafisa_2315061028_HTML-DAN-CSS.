@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Zahra Aulia Nafisa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="main-container">
+            <div class="nav">
+                <div class="nav-content">
+                <div class="logo">
+                    <img src="img/fisio.jpg" alt="fisiologo" />
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portofolios">Portofolio</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <script>
+                    
+                </script>
+            </div>
+            </div>
+            <section id="home">
+                <div class="home-left">
+                    <h3 class="pre-title">
+                        <span class="text">🖐️Hello all My Name Is</span>
+                        <span class="text">Welcome To The Site😎</span>
+                    </h3>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const texts = document.querySelectorAll('.text');
+                            let currentText = 0;
+                        
+                            function nextText() {
+                                texts[currentText].style.opacity = 0;
+                                texts[currentText].style.width = '0';  // Reset lebar untuk animasi
+                        
+                                currentText = (currentText + 1) % texts.length;
+                        
+                                texts[currentText].style.opacity = 1;
+                                texts[currentText].style.width = '0';  // Memastikan lebar dimulai dari 0
+                                texts[currentText].style.animation = 'none';  // Hapus animasi
+                                texts[currentText].offsetHeight; // Trigger reflow untuk reset animasi
+                                texts[currentText].style.animation = 'berjalan 3s steps(30, end) forwards, berkedip 0.8s step-end infinite';
+                            }
+                        
+                            texts[currentText].style.opacity = 1;
+                            texts[currentText].style.animation = 'berjalan 3s steps(30, end) forwards, berkedip 0.8s step-end infinite';
+                        
+                            setInterval(nextText, 6000); // Ganti teks setiap 6 detik
+                        });
+                        
+                        
+                    </script>
+                </body>
+                </html>
+                    <h1 class="home-name">ZAHRA AULIA NAFISA</h1>
+                    <p>Mahasiswi Teknik Informatika di Universitas Lampung dengan konsentrasi pada bidang Jaringan Komputer. Memiliki ketertarikan dalam memahami infrastruktur jaringan, konfigurasi perangkat, serta keamanan sistem.</p>
+                    <br />
+                    <a href="CVZahra.pdf" target="_blank">
+                        <button class="btn">My Resume</button>
+                    </a>
+                    
+                    <a href="PortofolioZahra.pdf" target="_blank">
+                        <button class="btnPor">My Portofolio</button>
+                    </a>
+                </div>
+
+                <div class="home-right">
+                    <img src="img/fotozahra.png" alt="fotozahra" />
+                </div>
+            </section>
+        </div>
+    </header>
+    <!-- End of Header -->
+
+    <!-- About -->
+    <section id="about">
+        <div class="main-container">
+            <h1 class="section-title-about">About</h1>
+            <p style="text-align: center; color: white;">Halo, saya Zahra Aulia Nafisa, mahasiswi Teknik Informatika dengan latar belakang teknologi informasi yang berfokus pada Jaringan Komputer, dan IoT. Selain itu saya juga senang mengembangkan diri di bidang Web Development untuk menciptakan solusi digital yang efisien, intuitif, dan menarik. Mari kita berkolaborasi untuk mengubah ide kreatif Anda menjadi realitas yang memukau.</p>
+            <br />
+            <br />
+            
+            <div class="grid-3">
+                <!-- About 1 -->
+                <div class="about">
+                    <div class="about-icon">
+                        <img src="img/IoT.png" alt="graphicdesign" width="24" height="24" viewbox ="0 0 24 24" />
+                    </div>
+                    <h4>IoT (Internet of Things)</h4>
+                    <p>IoT atau Internet of Things adalah teknologi yang menghubungkan berbagai perangkat fisik agar dapat saling berkomunikasi dan bertukar data melalui jaringan. Fokus saya adalah mengembangkan solusi yang efisien dan mudah digunakan, dengan menggabungkan aspek jaringan dan pemrograman.</p>
+                </div>
+
+                <!-- About 2 -->
+                <div class="about">
+                    <div class="about-icon">
+                        <img src="img/web dev.png" alt="uiuxdesign" width="24" height="24" viewbox ="0 0 24 24" />
+                    </div>
+                    <h4>Web Development</h4>
+                    <p>Web development adalah proses pembuatan dan pengembangan situs web yang bisa kita akses lewat internet. Proses ini mencakup berbagai aspek, mulai dari pengembangan halaman web sederhana yang berisi teks statis hingga aplikasi web kompleks, layanan jaringan sosial, dan solusi bisnis online.</p>
+                </div>
+
+                <!-- About 3 -->
+                <div class="about">
+                    <div class="about-icon">
+                        <img src="img/networking.png" alt="webdevelopment" width="24" height="24" viewbox ="0 0 24 24" />
+                    </div>
+                    <h4>Computer Networking</h4>
+                    <p>Jaringan komputer adalah bidang yang mempelajari cara perangkat saling terhubung untuk bertukar data dan informasi secara efisien. Dalam dunia teknologi, jaringan berperan penting dalam menjaga konektivitas antar sistem dan pengguna. Bidang ini melibatkan perancangan, konfigurasi, serta pemeliharaan infrastruktur jaringan agar komunikasi berjalan aman dan stabil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Section -->
+
+    <!-- Portofolio 1-->
+    <section id="portofolios">
+        <div class="portofolios main-container">
+            <h1 class="section-title-portofolios">Featured Portofolio</h1>
+            <p style="text-align: center; color: black;">Halo! Di bawah ini adalah beberapa proyek yang pernah saya buat selama belajar di bidang Teknik Informatika. Saya senang bereksperimen dengan IoT, Web Development, dan Computer Network. Proyek ini saya kembangkan menggunakan berbagai tools seperti Visual Studio Code, Figma, Cisco Packet Tracker dan lainnya.</p>
+            <div class="portofolios-grid">
+            <div class="portofolios">
+            <div class="portofolio-cover">
+                <img src="img/portofolio/portofolio1.jpg" alt="Portofolio 1" width="350" height="250" viewbox ="0 0 100 100" />
+            </div>
+
+            <div class="portofolio-info">
+                <div class="portofolio-title">
+                    <h4>IoT Project</h4>
+                </div>
+
+                <div class="portofolio-tags">
+                    <div>Hardware</div>
+                    <div>Arduino</div>
+                </div>
+
+                <p>Saya telah mengerjakan beberapa proyek Internet of Things (IoT) dengan memanfaatkan mikrokontroler, sensor, dan modul komunikasi untuk menciptakan sistem otomatisasi sederhana. 
+            Proyek yang saya buat berfokus pada pengumpulan data real-time dan kontrol perangkat berbasis jaringan.</p>
+            </div>
+        </div>
+
+        <!-- portofolio 2 -->
+        <div class="portofolios">
+            <div class="portofolio-cover">
+                <img src="img/portofolio/portofolio2.jpg" alt="Portofolio 2" width="350" height="250" viewbox ="0 0 100 100" />
+            </div>
+
+            <div class="portofolio-info">
+                <div class="portofolio-title">
+                    <h4>Web Development</h4>
+                </div>
+
+                <div class="portofolio-tags">
+                    <div>Frontend</div>
+                    <div>HTML/CSS</div>
+                </div>
+
+                <p>Dalam bidang pengembangan web, saya telah membuat beberapa website untuk keperluan pribadi dan tugas akademik menggunakan HTML, CSS, dan JavaScript. Saya berfokus pada pembuatan tampilan antarmuka yang responsif, mudah digunakan, dan sesuai dengan kebutuhan pengguna.</p>
+            </div>
+        </div>
+        <!-- portofolio 3 -->
+        <div class="portofolios">
+            <div class="portofolio-cover">
+                <img src="img/portofolio/portofolio3.jpg" alt="Portofolio 3" width="350" height="250" viewbox ="0 0 100 100" />
+            </div>
+
+            <div class="portofolio-info">
+                <div class="portofolio-title">
+                    <h4>Computer Networking</h4>
+                </div>
+
+                <div class="portofolio-tags">
+                    <div>Network</div>
+                    <div>Configuration</div>
+                </div>
+
+                <p>Saya mempelajari dan menerapkan konsep dasar jaringan komputer, mulai dari konfigurasi perangkat hingga pengelolaan koneksi antar sistem. Bidang ini menjadi dasar penting dalam mendukung pengembangan sistem berbasis IoT dan web yang terhubung dengan baik.</p>
+            </div>
+        </div>
+        </div>
+        </div>
+
+    </section>
+
+    <!-- End Portofolio -->
+
+    <!-- Skills and Experience-->
+    <section id="skills">
+        <div class="skill main-container">
+            <h1 class="section-title-skills">Experience, Skills & Tools</h1>
+            <div class="skills-grid">
+            <div class="skills-left">
+                <!-- Experience 1 -->
+                <div class="experience">
+                    <div class="line">
+                        <div></div>
+                    </div>
+
+                    <div class="experience-info">
+                        <h4 class="experience-title">Anggota Divisi Pengembangan dan Keteknikan (BANGTEK)</h4>
+                        <p>HIMATRO</p>
+                        <h4 class="experience-date">2024 - Sekarang</h4>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+            <div class="experience">
+                <div class="line">
+                    <div></div>
+                </div>
+
+                <div class="experience-info">
+                    <h4 class="experience-title">Panitia EEA</h4>
+                    <p>Electrical Engineering in Action</p>
+                    <h4 class="experience-date">2024 - Sekarang</h4>
+                </div>
+            </div>
+
+                <!-- Experience 3 -->
+                <div class="experience">
+                    <div class="line">
+                        <div></div>
+                    </div>
+
+                    <div class="experience-info">
+                        <h4 class="experience-title">Peserta Samsung Innovation Campus (SIC) Batch 7</h4>
+                        <p>Samsung Electronics Indonesia</p>
+                        <h4 class="experience-date">2025</h4>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="experience">
+                    <div class="line">
+                        <div></div>
+                    </div>
+
+                    <div class="experience-info">
+                        <h4 class="experience-title">Kegiatan Pengabdian Masyarakat EGOS & EGOV</h4>
+                        <p>PENGMAS</p>
+                        <h4 class="experience-date">2024 - sekarang</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-right">
+                <p>Beberapa Skill yang saya miliki saat menjalani dunia perkuliahan dalam 2 Tahun terakhir ini:</p>
+                <div class="skills-list">
+                    <ul>
+                        <li>Komunikasi</li>
+                        <li>Kerjasama Tim</li>
+                        <li>Manajemen Waktu</li>
+                        <li>Berpikir Kritis</li>
+                    </ul>
+
+                    <ul>
+                        <li>Pemrograman</li>
+                        <li>Database Management</li>
+                        <li>Mikrokontroler Dasar</li>
+                        <li>Jaringan Komputer</li>
+                    </ul>
+                </div>
+                <br />
+                <p>Tools yang saya gunakan selama menjadi mahasiswi informatika:</p>
+                <div class="skills-list">
+                    <ul>
+                        <li>Microsoft Office</li>
+                        <li>VS Code</li>
+                    </ul>
+
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Canva & Figma</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Experience and Skills -->
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="contact main-container">
+            <div style="text-align: center;">
+            <h1>Contact</h1>
+            <p>Saya senang mendengar pertanyaan ataupun masukan dari Anda! Jika Anda memiliki pertanyaan, ide, atau hanya ingin menyapa, jangan ragu untuk menghubungi saya. Dan Mari berkolaborasi! Hubungi saya melalui formulir di bawah ini.</p>
+            <br>
+            </div>
+        
+        <form class="contact-form">
+            <div>
+                <input type="text" name="name" placeholder="Name">
+            </div>
+
+            <div>
+                <input type="email" name="email" placeholder="Email">
+            </div>
+
+            <div>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+            </div>
+
+            <div>
+                <button class="btn-submit">Send Message</button>
+            </div>
+        </div>
+        </form>
+    </section>
+    <!-- End of Contact -->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.instagram.com/zhraaulianafisa?igsh=MXNsaXRqZTdnc3V2dg==">
+                <img src="img/insta.png" alt="igsftrbintangg" width="24" height="24" viewbox = "0 0 24 24" />
+            </a>
+
+            <a href="https://www.instagram.com/n.fiisaa?igsh=MXFxb2JoeGU0MmR4eQ%3D%3D&utm_source=qr">
+                <img src="img/insta.png" alt="igngabers.std" width="24" height="24" viewbox = "0 0 24 24" />
+            </a>
+
+            <a href="https://www.linkedin.com/in/zahra-aulia-nafisa-b25a64293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+                <img src="img/linked.png" alt="libintangsaftar" width="24" height="24" viewbox = "0 0 24 24" />
+            </a>
+
+            <a href="https://github.com/zahraaulianafisa">
+                <img src="img/git.png" alt="gtbintangsaftar" width="24" height="24" viewbox = "0 0 24 24" />
+            </a>
+        </div>
+
+        <p style="color: white;">&#169; 2025 All Right Reserved</p>
+    </footer>
+    <!-- End of Footer -->
+</body>
+</html>

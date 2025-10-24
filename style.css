@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+p {
+    font-size: 1rem; /* 1rem=16px */
+    line-height: 1.9rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+/* button */
+.btn {
+    padding: 1rem 1.5rem;
+    background: white;
+    color: rgb(61, 52, 235);
+    border: 1.5px solid rgb(61, 52, 235);
+    cursor: pointer;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color:rgb(209, 207, 207);
+}
+
+.btnPor {
+    padding: 1rem 1.5rem;
+    background: rgb(61, 52, 235);
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+}
+
+.btnPor:hover {
+    background-color:rgb(209, 207, 207);
+}
+
+/* title */
+.pre-title {
+    position: relative;
+    font-weight: 400;
+    font-size: 1rem;
+    padding-left: 40px;
+    
+    height: 1.5rem;
+}
+
+.pre-title .text {
+    display: inline-block;
+    white-space: nowrap; /* Hindari teks berpindah ke baris baru */
+    /* overflow: hidden; Sembunyikan bagian teks yang melampaui batas span */
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: grey;
+    border-right: 2px solid rgb(61, 52, 235);
+    /* animation: berjalan 3s steps(30, end), berkedip 0.8s ease infinite; */
+    width: 0;
+}
+
+.pre-title::before{
+    content: "";
+    width: 20px;
+    height: 1px;
+    background: grey;
+    position: absolute;
+    left: 0;
+    top: 35%;
+}
+
+@keyframes berjalan {
+    from {
+        width: 0;
+    }
+    to {
+        width: 68%;
+    }
+}
+
+@keyframes berkedip {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: rgb(61, 52, 235);
+    }
+}
+
+/* logo dan navbar menu */
+.nav{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95); /* Sedikit transparan */
+    backdrop-filter: blur(10px);
+    transition: background-color 0.2s ease, backdrop-filter 0.2s ease;
+    z-index: 1000;
+}
+
+.nav.blur {
+    background: rgba(255, 255, 255, 0.5); /* Lebih transparan ketika scroll */
+    backdrop-filter: blur(8px); /* Blur efek */
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.nav ul {
+    padding-top: 1.5rem;
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+    
+}
+
+.logo img {
+    width: 115px;
+}
+
+nav ul li a {
+    color: black;
+}
+
+nav ul li a:hover {
+    color: rgb(61, 52, 235);
+}
+
+/* home section */
+#home {
+    height: 770px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.home-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+    color: rgb(61, 52, 235);
+}
+
+.home-right img {
+    width: 350px;
+    border-radius: 0.7rem;
+    -webkit-border-radius: 0.7rem;
+    -moz-border-radius: 0.7rem;
+    -ms-border-radius: 0.7rem;
+    -o-border-radius: 0.7rem;
+}
+
+.home-right {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    padding-left: 3rem;
+    padding-bottom: 0;
+}
+
+/* About Section */
+
+#about {
+    background-color: rgb(61, 52, 235);
+    padding: 6rem 0;
+}
+
+.section-title-about {
+    color: white;
+    text-align: center;
+    margin: 1rem 0 2rem;
+}
+
+
+/* layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.about {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: white;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.about h4 {
+    color: black;
+    margin: 0.5rem 0;
+}
+
+.about p {
+    color: grey;
+}
+
+.about-icon {
+    background-color: rgb(209, 207, 207);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+/* End of About */
+
+/* portofolio */
+#portofolios {
+    background-color: white;
+    padding: 6rem 0;
+}
+
+.section-title-portofolios {
+    color: black;
+    text-align: center;
+    margin: 1rem 0 2rem;
+    padding-top: 2rem;
+}
+
+.portofolios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom di grid */
+    gap: 2rem;
+    padding: 2rem 2rem; /* Penambahan padding pada grid */
+}
+
+.portofolios {
+    padding: 0 1rem;
+    overflow: hidden;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.portofolios-cover {
+    /*Memastikangambartidakmelebihibataskartu*/border-radius: 1rem 1rem 0 0;
+    -webkit-border-radius: 1rem 1rem 0 0;
+    -moz-border-radius: 1rem 1rem 0 0;
+    -ms-border-radius: 1rem 1rem 0 0;
+    -o-border-radius: 1rem 1rem 0 0;
+}
+
+.portofolios-cover img {
+    width: 100%; /* Lebar gambar menjadi 100% dari kontainernya */
+    height: 200px; /* Tinggi gambar tetap */
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa distorsi */
+}
+
+.portofolio-title h4 {
+    padding-top: 1rem;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.portofolio-tags{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.portofolio-tags div {
+    font-size: .9rem;
+    border: 1px solid rgb(61, 52, 235);
+    padding: .4rem 1rem;
+    color: rgb(61, 52, 235);
+}
+/* end portofolio */
+
+/* Skills and Experience */
+#skills {
+    padding: 6rem 0;
+    background: rgb(61, 52, 235);
+    color: white;
+}
+
+.section-title-skills {
+    text-align: center;
+    margin: 1rem 0 4rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.experience {
+    display: flex;
+    gap: 2rem;
+}
+
+.experience line {
+    padding: 0 0.7rem;
+}
+
+.experience .line div {
+    width: 2px;
+    height: 100%;
+    background: white;
+    position: relative;
+}
+
+.experience-info {
+    margin: 0.3rem 0;
+}
+
+.experience-date {
+    margin-bottom: 3rem;
+}
+
+.experience .line div::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+
+.skills-right {
+    line-height: 2rem;
+    padding: 0 1rem;
+}
+
+/* End of Experience and Skills */
+
+/* Contact */
+#contact {
+    padding: 6rem;
+}
+
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: white;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: black;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid grey;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: rgb(61, 52, 235);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color:rgb(209, 207, 207);
+}
+
+/* End of Contact */
+
+/* Footer */
+footer {
+    margin-bottom: 0;
+    padding: 4rem 0;
+    background:rgb(61, 52, 235);
+    text-align: center;
+}
+
+.footer-icons {
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    margin: 0 0.5rem;
+}
+
+.footer-icons a:hover {
+    fill: black;
+}
+
+.footer-icons {
+    fill: grey;
+}
